@@ -1,0 +1,648 @@
+{
+  "contact_email": "jay@cloudmc.us",
+  "version": "1.0",
+  "sellers": [
+    {
+      "seller_id": "1007",
+      "seller_type": "PUBLISHER",
+      "domain": "www.rockytopinsider.com",
+      "name": "rockytopinsider"
+    },
+    {
+      "seller_id": "1008",
+      "seller_type": "PUBLISHER",
+      "domain": "www.eyepopperdigital.com",
+      "name": "eyepopperdigital"
+    },
+    {
+      "seller_id": "1009",
+      "seller_type": "PUBLISHER",
+      "domain": "www.inhalesports.com",
+      "name": "inhalesports"
+    },
+    {
+      "seller_id": "1013",
+      "seller_type": "PUBLISHER",
+      "domain": "www.yardbarker.com",
+      "name": "YB Media LLC"
+    },
+    {
+      "seller_id": "1014",
+      "seller_type": "PUBLISHER",
+      "domain": "sportspublishersgroup.com",
+      "name": "Sports Publishers Group"
+    },
+    {
+      "seller_id": "1017",
+      "seller_type": "PUBLISHER",
+      "domain": "www.fanalytix.net",
+      "name": "Fanalytix"
+    },
+    {
+      "seller_id": "1028",
+      "seller_type": "PUBLISHER",
+      "domain": "www.huskermax.com",
+      "name": "HuskerMax"
+    },
+    {
+      "seller_id": "1029",
+      "seller_type": "PUBLISHER",
+      "domain": "ndnation.com",
+      "name": "NDNation"
+    },
+    {
+      "seller_id": "1033",
+      "seller_type": "PUBLISHER",
+      "domain": "www.primetimesportstalk.com",
+      "name": "Prime Time Sports Talk LLC"
+    },
+    {
+      "seller_id": "1034",
+      "seller_type": "PUBLISHER",
+      "domain": "www.sportsplays.com",
+      "name": "Sports Plays (Recreational Gaming LLC)"
+    },
+    {
+      "seller_id": "1038",
+      "seller_type": "PUBLISHER",
+      "domain": "LARamsFans.com",
+      "name": "LA Rams Fans"
+    },
+    {
+      "seller_id": "1039",
+      "seller_type": "PUBLISHER",
+      "domain": "LARamsNews.com",
+      "name": "LA Rams News"
+    },
+    {
+      "seller_id": "1040",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.billsfans.com",
+      "name": "Rumbling Herd Media, LLC"
+    },
+    {
+      "seller_id": "1041",
+      "seller_type": "PUBLISHER",
+      "domain": "www.blackngoldhockey.com",
+      "name": "Black N' Gold Promotions LLC"
+    },
+    {
+      "seller_id": "1042",
+      "seller_type": "PUBLISHER",
+      "domain": "www.chiefsfocus.com",
+      "name": "Chiefs Focus LLC"
+    },
+    {
+      "seller_id": "1043",
+      "seller_type": "PUBLISHER",
+      "domain": "www.relevnt.com",
+      "name": "Relevnt"
+    },
+    {
+      "seller_id": "1044",
+      "seller_type": "PUBLISHER",
+      "domain": "https://sportsblog.cloudmcapp.com",
+      "name": "CMC Sportsblog"
+    },
+    {
+      "seller_id": "1045",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.centsports.com",
+      "name": "CentSports"
+    },
+    {
+      "seller_id": "1046",
+      "seller_type": "PUBLISHER",
+      "domain": "www.BuccaneersFan.com",
+      "name": "Buccaneers Fan"
+    },
+    {
+      "seller_id": "1047",
+      "seller_type": "PUBLISHER",
+      "domain": "www.ladodgerreport.com",
+      "name": "Ladodger Report"
+    },
+    {
+      "seller_id": "1048",
+      "seller_type": "PUBLISHER",
+      "domain": "https://fanbanter.co.uk",
+      "name": "Fan Banter"
+    },
+    {
+      "seller_id": "1049",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.uhnd.com",
+      "name": "UHND"
+    },
+    {
+      "seller_id": "1050",
+      "seller_type": "PUBLISHER",
+      "domain": "www.ownedcore.com",
+      "name": "OC Gaming LLC"
+    },
+    {
+      "seller_id": "1051",
+      "seller_type": "PUBLISHER",
+      "domain": "https://zonecoverage.com",
+      "name": "Zone Coverage"
+    },
+    {
+      "seller_id": "1053",
+      "seller_type": "PUBLISHER",
+      "domain": "www.buckeyescoop.com",
+      "name": "Buckeye Scoop"
+    },
+    {
+      "seller_id": "1055",
+      "seller_type": "PUBLISHER",
+      "domain": "www.minnesotasportsfan.com",
+      "name": "Minnesota Sports Fan"
+    },
+    {
+      "seller_id": "1056",
+      "seller_type": "PUBLISHER",
+      "domain": "www.hogville.net",
+      "name": "Hogville"
+    },
+    {
+      "seller_id": "1057",
+      "seller_type": "PUBLISHER",
+      "domain": "www.fearlessfriday.com",
+      "name": "Fearless Friday"
+    },
+    {
+      "seller_id": "1058",
+      "seller_type": "PUBLISHER",
+      "domain": "www.raiderramble.com ",
+      "name": "Raider Ramble"
+    },
+    {
+      "seller_id": "1061",
+      "seller_type": "PUBLISHER",
+      "domain": "www.thestadiumreviews.com",
+      "name": "The Stadium Reviews, LLC"
+    },
+    {
+      "seller_id": "900",
+      "seller_type": "PUBLISHER",
+      "domain": "msn.com",
+      "name": "Microsoft - MSN"
+    },
+    {
+      "seller_id": "901",
+      "seller_type": "PUBLISHER",
+      "domain": "wordhippo.com",
+      "name": "WordHippo"
+    },
+    {
+      "seller_id": "902",
+      "seller_type": "PUBLISHER",
+      "domain": "www.theblaze.com",
+      "name": "The Blaze"
+    },
+    {
+      "seller_id": "903",
+      "seller_type": "PUBLISHER",
+      "domain": "www.cheezburger.com",
+      "name": "Literally Media"
+    },
+    {
+      "seller_id": "904",
+      "seller_type": "PUBLISHER",
+      "domain": "www.fandom.com",
+      "name": "Fandom"
+    },
+    {
+      "seller_id": "905",
+      "seller_type": "PUBLISHER",
+      "domain": "www.cracked.com",
+      "name": "Cracked"
+    },
+    {
+      "seller_id": "906",
+      "seller_type": "PUBLISHER",
+      "domain": "www.zerohedge.com",
+      "name": "ZeroHedge"
+    },
+    {
+      "seller_id": "907",
+      "seller_type": "PUBLISHER",
+      "domain": "www.mommypoppins.com",
+      "name": "Mommy Poppins"
+    },
+    {
+      "seller_id": "908",
+      "seller_type": "PUBLISHER",
+      "domain": "www.thewindowsclub.com",
+      "name": "The Windows Club"
+    },
+    {
+      "seller_id": "909",
+      "seller_type": "PUBLISHER",
+      "domain": "www.hellhades.com",
+      "name": "Hell Hades"
+    },
+    {
+      "seller_id": "910",
+      "seller_type": "PUBLISHER",
+      "domain": "www.convertunits.com",
+      "name": "Convert Units"
+    },
+    {
+      "seller_id": "911",
+      "seller_type": "PUBLISHER",
+      "domain": "www.FantasyPros.com",
+      "name": "Fantasy Pros"
+    },
+    {
+      "seller_id": "912",
+      "seller_type": "PUBLISHER",
+      "domain": "www.zonecoverage.com",
+      "name": "Twins Daily, LLC"
+    },
+    {
+      "seller_id": "913",
+      "seller_type": "PUBLISHER",
+      "domain": "www.ebaumsworld.com",
+      "name": "Literally Media"
+    },
+    {
+      "seller_id": "914",
+      "seller_type": "PUBLISHER",
+      "domain": "www.Venturebeat.com",
+      "name": "VentureBeat"
+    },
+    {
+      "seller_id": "915",
+      "seller_type": "PUBLISHER",
+      "domain": "www.Metasrc.com",
+      "name": "Metasource"
+    },
+    {
+      "seller_id": "916",
+      "seller_type": "PUBLISHER",
+      "domain": "www.travelmath.com",
+      "name": "Travel Math"
+    },
+    {
+      "seller_id": "917",
+      "seller_type": "PUBLISHER",
+      "domain": "www.yellowpages.com",
+      "name": "YP, Inc."
+    },
+    {
+      "seller_id": "918",
+      "seller_type": "INTERMEDIARY",
+      "domain": "amitydigital.io",
+      "name": "Amity Digital"
+    },
+    {
+      "seller_id": "1066",
+      "seller_type": "PUBLISHER",
+      "domain": "www.tigerrag.com",
+      "name": "Tiger Rag"
+    },
+    {
+      "seller_id": "1067",
+      "seller_type": "PUBLISHER",
+      "domain": "www.huskerboard.com",
+      "name": "Husker Board"
+    },
+    {
+      "seller_id": "1068",
+      "seller_type": "PUBLISHER",
+      "domain": "www.cyclonefanatic.com",
+      "name": "Cyclone Fanatic"
+    },
+    {
+      "seller_id": "1069",
+      "seller_type": "PUBLISHER",
+      "domain": "www.bearinsider.com",
+      "name": "Bear Insider"
+    },
+    {
+      "seller_id": "1072",
+      "seller_type": "PUBLISHER",
+      "domain": "www.fastphillysports.com",
+      "name": "Fast Philly Sports"
+    },
+    {
+      "seller_id": "1073",
+      "seller_type": "PUBLISHER",
+      "domain": "https://dolphinstalk.com",
+      "name": "DolphinTalk"
+    },
+    {
+      "seller_id": "1074",
+      "seller_type": "PUBLISHER",
+      "domain": "https://frontofficesports.com/",
+      "name": "Front Office Sports"
+    },
+    {
+      "seller_id": "1075",
+      "seller_type": "PUBLISHER",
+      "domain": "www.thegolfnewsnet.com",
+      "name": "Golf News Net"
+    },
+    {
+      "seller_id": "1059",
+      "seller_type": "PUBLISHER",
+      "domain": "www.squareoffs.com",
+      "name": "Square Off"
+    },
+    {
+      "seller_id": "1078",
+      "seller_type": "PUBLISHER",
+      "domain": "https://forum.killerfrogs.com/",
+      "name": "KillerFrogs"
+    },
+    {
+      "seller_id": "1079",
+      "seller_type": "PUBLISHER",
+      "domain": "www.thefansforums.com",
+      "name": "The Fans Forums"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "https://conbasesllenas.com/",
+      "name": "ConLas Bases Llenas"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "www.nufcblog.co.uk",
+      "name": "NUFC Blog"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "https://fanspeak.com/",
+      "name": "Fan Speak"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Interbasket.net",
+      "name": "Inter Basket"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Golfreviewsguide.com",
+      "name": "Golf Reviews Guide"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Detroitsportsnation.com",
+      "name": "Detroit Sports Nation"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Sportfishingbuddy.com",
+      "name": "Sport Fishing Buddy"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://tarheeltribune.com",
+      "name": "Tar Heel Tribune"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Groupgames101.com",
+      "name": "Group Games 101"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Littleballparks.com",
+      "name": "Little Ball Parks"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Sportblis.com",
+      "name": "Sport Blis"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Nfldraftlounge.com",
+      "name": "NFL Draft Lounge"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Bicyclesinmotion.com",
+      "name": "Bicycles In Motion"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://Volley-pedia.com",
+      "name": "Volleypedia"
+    },
+    {
+      "seller_id": "951",
+      "seller_type": "PUBLISHER",
+      "domain": "http://volleyballadvice.com",
+      "name": "Volleyball Advice"
+    },
+    {
+      "seller_id": "966",
+      "seller_type": "PUBLISHER",
+      "domain": "sportskeeda.com",
+      "name": "Sports Keeda"
+    },
+    {
+      "seller_id": "966",
+      "seller_type": "PUBLISHER",
+      "domain": "sportsbrief.com",
+      "name": "Sports Brief"
+    },
+    {
+      "seller_id": "966",
+      "seller_type": "PUBLISHER",
+      "domain": "footylight.com",
+      "name": "Footy Light"
+    },
+    {
+      "seller_id": "966",
+      "seller_type": "PUBLISHER",
+      "domain": "goonernews.com",
+      "name": "Gooner News"
+    },
+    {
+      "seller_id": "966",
+      "seller_type": "PUBLISHER",
+      "domain": "chelseanews.com",
+      "name": "Gooner News"
+    },
+    {
+      "seller_id": "966",
+      "seller_type": "PUBLISHER",
+      "domain": "https://thesportsgrail.com/",
+      "name": "The Sports Grail"
+    },
+    {
+      "seller_id": "1080",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.hookedonhockeymagazine.com",
+      "name": "Hooked On Hockey Magazine"
+    },
+    {
+      "seller_id": "1081",
+      "seller_type": "PUBLISHER",
+      "domain": "www.surlyhorns.com",
+      "name": "Surly Horns"
+    },
+    {
+      "seller_id": "1082",
+      "seller_type": "PUBLISHER",
+      "domain": "https://dukeblogger.com/",
+      "name": "Duke Blog"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.aol.com/",
+      "name": "Aol"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "http://bff.com.bd/",
+      "name": "Bangladesh Football Federation"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.broomfieldsoccerclub.org/",
+      "name": "Broomfield Soccer Club"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://cascais.ibercup.com/",
+      "name": "Ibercup World"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.cbf.com.br/",
+      "name": "CBF"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://elevensports.com/",
+      "name": "Eleven Sports"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://goalnepal.com/",
+      "name": "Goal Nepal"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://golf.com/",
+      "name": "Golf"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://jfa.jo/",
+      "name": "Jordan Football Association"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.ksi.is/",
+      "name": "KSI"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://nesn.com/",
+      "name": "New England Scores"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://netlusa.com.br/",
+      "name": "NETLUSA"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.nfl.com/",
+      "name": "NFL"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.npsl.com/",
+      "name": "NPSL"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.oceaniafootball.com/",
+      "name": "Oceania Football"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.scorebar.com/",
+      "name": "Scorebar"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://sny.tv/",
+      "name": "SNY"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.usadultsoccer.com/",
+      "name": "United State Adult Soccer Association"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.yahoo.com/",
+      "name": "Yahoo"
+    },
+    {
+      "seller_id": "952",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.zerozero.pt/",
+      "name": "Zero Zero"
+    },
+    {
+      "seller_id": "1083",
+      "seller_type": "PUBLISHER",
+      "domain": "www.gopherhole.com",
+      "name": "Gopher Hole"
+    },
+    {
+      "seller_id": "1084",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.danslescoulisses.com/",
+      "name": "PSquared"
+    },
+    {
+      "seller_id": "1085",
+      "seller_type": "PUBLISHER",
+      "domain": "https://www.sportelo.com.ng/",
+      "name": "Sportelo"
+    }
+  ]
+}
