@@ -12,7 +12,7 @@ Provides a WordPress interface for editing your site's sellers.json.
 
 ## Description ##
 
-For a detailed description of the sellers.json, please see (the technical specification)[https://iabtechlab.com/wp-content/uploads/2019/07/Sellers.json_Final.pdf] provided by (iab. Tech Lab)[https://iabtechlab.com/sellers-json/].
+For a detailed description of the sellers.json, please see [the technical specification](https://iabtechlab.com/wp-content/uploads/2019/07/Sellers.json_Final.pdf) provided by [iab. Tech Lab](https://iabtechlab.com/sellers-json/).
 
 ## Changelog ##
 
