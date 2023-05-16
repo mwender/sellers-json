@@ -4,7 +4,7 @@
 **Requires at least:** 4.5  
 **Tested up to:** 6.2  
 **Requires PHP:** 7.0  
-**Stable tag:** 1.0.1  
+**Stable tag:** 1.1.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -15,6 +15,9 @@ Provides a WordPress interface for editing your site's sellers.json.
 For a detailed description of the sellers.json, please see [the technical specification](https://iabtechlab.com/wp-content/uploads/2019/07/Sellers.json_Final.pdf) provided by [iab. Tech Lab](https://iabtechlab.com/sellers-json/).
 
 ## Changelog ##
+
+### 1.1.0 ###
+* Saving ACF settings locally.
 
 ### 1.0.1 ###
 * Setting `publicly_queryable = false` for Sellers CPT.

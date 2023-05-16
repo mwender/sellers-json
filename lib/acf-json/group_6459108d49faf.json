@@ -1,0 +1,112 @@
+{
+    "key": "group_6459108d49faf",
+    "title": "Seller Options",
+    "fields": [
+        {
+            "key": "field_6459108d3164d",
+            "label": "Seller ID",
+            "name": "seller_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645910ac3164e",
+            "label": "Seller Type",
+            "name": "seller_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "PUBLISHER": "PUBLISHER",
+                "INTERMEDIARY": "INTERMEDIARY",
+                "BOTH": "BOTH"
+            },
+            "default_value": "PUBLISHER",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_645911013164f",
+            "label": "Domain",
+            "name": "domain",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "The business domain name of the company (the legal entity) that is paid for inventory that is transacted under the given seller_id. When the seller_type property is set to INTERMEDIARY or BOTH, this should be the root domain name of the seller’s Sellers.json file. Can be omitted when is_confidential is set to 1 or when the seller doesn’t have a web presence.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6459116e31650",
+            "label": "Name",
+            "name": "name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "OPTIONAL: Defaults to the \"Title\" of this seller. The name of the company (the legal entity) that is paid for inventory that is transacted under the given seller_id. Can be omitted only when is_confidential is set to 1.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "35",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "seller"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1684248670
+}
