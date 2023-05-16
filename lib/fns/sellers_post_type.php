@@ -46,7 +46,7 @@ function cptui_register_my_cpts() {
     "labels" => $labels,
     "description" => "Defines an entity that is either direct seller of or intermediary in the selling of digital advertising.",
     "public" => true,
-    "publicly_queryable" => true,
+    "publicly_queryable" => false,
     "show_ui" => true,
     "show_in_rest" => true,
     "rest_base" => "",
