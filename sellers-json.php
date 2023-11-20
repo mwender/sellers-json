@@ -7,7 +7,7 @@
  * Author URI:      https://mwender.com
  * Text Domain:     sellers-json
  * Domain Path:     /languages
- * Version:         1.1.0
+ * Version:         1.2.0
  *
  * @package         Sellers_Json
  */

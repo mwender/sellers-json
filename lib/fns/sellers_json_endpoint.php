@@ -1,23 +1,20 @@
 <?php
 
-// Register the API endpoint
-add_action('init', function() {
-  add_rewrite_rule('^sellers\.json$', 'index.php?json=sellers', 'top');
-});
+namespace SellersJson\endpoint;
 
-// Add the 'json' query variable
-add_filter('query_vars', function($vars) {
-  $vars[] = 'json';
-  return $vars;
-});
+/**
+ * Display the contents of /sellers.json when requested.
+ *
+ * @return void
+ */
+function display_sellers_json() {
+  $request = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : false;
+  if ( '/sellers.json' === $request || '/sellers.json?' === substr( $request, 0, 9 ) ) {
 
-// Define the callback function for the API endpoint
-add_action('template_redirect', function() {
-  $json = get_query_var('json');
-  if ( $json == 'sellers' ) {
-    // Set the content type to JSON
+    // Set custom header for sellers-json
+    header( 'X-Sellers-Json-Generator: https://wenmarkdigital.com/plugins/sellers-json/' );
+
     header('Content-Type: application/json');
-
     // Get the sellers page content from the wp_options table
     $sellers = get_posts([
       'post_type'       => 'seller',
@@ -54,4 +51,5 @@ add_action('template_redirect', function() {
 
     wp_send_json( $json, 200 );
   }
-});
+}
+add_action( 'init', __NAMESPACE__ . '\\display_sellers_json' );
