@@ -7,7 +7,7 @@
  * Author URI:      https://mwender.com
  * Text Domain:     sellers-json
  * Domain Path:     /languages
- * Version:         1.4.1
+ * Version:         1.4.2
  *
  * @package         Sellers_Json
  */
@@ -15,7 +15,7 @@
 define( 'SELLERS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'SELLERS_URL', plugin_dir_url( __FILE__ ) );
 define( 'SELLERS_PLUGIN_CHECK_EP', 'https://sellers-json.wenmarkdigital.com/api/updates.php' );
-define( 'SELLERS_PLUGIN_CHECK_EXPIRATION', 90 );
+define( 'SELLERS_PLUGIN_CHECK_EXPIRATION', 7200 );
 define( 'SELLERS_PLUGIN_CHECK_TRANSIENT_NAME', 'sellers_plugin_update' );
 define( 'SELLERS_PLUGIN_FULL_FILENAME', __FILE__ );
 define( 'SELLERS_PLUGIN_SLUG', plugin_basename( __DIR__ ) );
