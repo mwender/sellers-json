@@ -92,7 +92,7 @@ function filter_plugin_info( $res, $action, $args ){
   $res->sections = array(
     'description' => 'Provides an interface for editing your site\'s sellers.json.',
     'installation' => null,
-    'changelog' => '<strong>1.4.2</strong><ul><li>Setting cache duration for plugin update check to 2 hours.</li></ul><strong>Version 1.4.1</strong><ul><li>Update API bug fixes.</li></ul>'
+    'changelog' => '<strong>1.4.2</strong><ul><li>Setting cache duration for plugin update check to 2 hours.</li></ul><strong>1.4.1</strong><ul><li>Update API bug fixes.</li></ul>'
   );
 
   if( ! empty( $remoteData->banners ) ) {
