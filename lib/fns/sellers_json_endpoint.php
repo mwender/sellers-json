@@ -12,7 +12,7 @@ function display_sellers_json() {
   if ( '/sellers.json' === $request || '/sellers.json?' === substr( $request, 0, 9 ) ) {
 
     // Set custom header for sellers-json
-    header( 'X-Sellers-Json-Generator: https://wenmarkdigital.com/plugins/sellers-json/' );
+    header( 'X-Sellers-Json-Generator: https://sellers-json.wenmarkdigital.com' );
 
     header('Content-Type: application/json');
     // Get the sellers page content from the wp_options table
