@@ -4,17 +4,24 @@ Tags: comments, spam
 Requires at least: 4.5
 Tested up to: 6.7.1
 Requires PHP: 7.0
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Provides a WordPress interface for editing your site's sellers.json.
+The Sellers.json Editor is a WordPress plugin for adding and editing a sellers.json file to your website.
 
 == Description ==
 
+The Sellers.json Editor is a WordPress plugin which implments [the Sellers.Json specification](https://iabtechlab.com/sellers-json/) by IAB Tech Lab. It provides a WordPress backend mechanism for adding "Sellers" which are then displayed as JSON data in a sellers.json file available on your website.
+
 For a detailed description of the sellers.json, please see [the technical specification](https://iabtechlab.com/wp-content/uploads/2019/07/Sellers.json_Final.pdf) provided by [iab. Tech Lab](https://iabtechlab.com/sellers-json/).
 
+This plugin is maintained and distributed by [Wenmark Digital Solutions](https://wenmarkdigital.com).
+
 == Changelog ==
+
+= 1.5.2 =
+* Updating "Update API" to dynamically retrieve Description and Changelog sections from `README.md`.
 
 = 1.5.1 =
 * Compiling README.
