@@ -26,7 +26,6 @@ function fetch_remote_data() {
   }
 
   $remoteData = json_decode( wp_remote_retrieve_body( $remoteData ) );
-  //return $remoteData;
 
   //*
   return (object) [
@@ -43,9 +42,6 @@ function fetch_remote_data() {
       'tested'        => '',
       'requires_php'  => '',
       'compatibility' => new \stdClass(),
-      'banners'       => [
-        'low' => 'There is a new version of the Sellers.json Editor.',
-      ],
   ];
   /**/
 }
@@ -81,18 +77,17 @@ function filter_plugin_info( $res, $action, $args ) {
   $res->version = $remoteData->new_version;
 
   // Fetch changelog dynamically
-  $changelog = get_plugin_changelog();
+  $pluginDetails = get_plugin_details();
 
   $res->sections = array(
-    'description' => 'Provides an interface for editing your site\'s sellers.json.',
-    'changelog' => $changelog ? $changelog : 'Changelog could not be retrieved.',
+    'description' => $pluginDetails['description'] ? $pluginDetails['description'] : 'Changelog could not be retrieved.',
+    'changelog' => $pluginDetails['changelog'] ? $pluginDetails['changelog'] : 'Changelog could not be retrieved.',
   );
 
-  if ( ! empty( $remoteData->banners ) ) {
-    $res->banners = array(
-      'low' => $remoteData->banners['low'],
-    );
-  }
+  $res->banners = [ 
+    'low'   => 'https://sellers-json.wenmarkdigital.com/assets/banner-772x250.jpg',
+    'high'  => 'https://sellers-json.wenmarkdigital.com/assets/banner-1544x500.jpg' 
+  ];  
 
   return $res;
 }
@@ -147,55 +142,72 @@ function filter_update_plugins( $update_plugins ){
 add_filter( 'site_transient_update_plugins', __NAMESPACE__ . '\\filter_update_plugins' );
 
 /**
- * Retrieves the plugin changelog content.
+ * Retrieves the plugin details including changelog and description.
  *
- * This function checks for the presence of a `readme.txt` or `README.md` file
- * within the plugin directory defined by `SELLERS_PATH`. It prioritizes the
- * `README.md` file and falls back to `readme.txt` if the former is not found.
+ * This function checks for the presence of a `README.md` file
+ * within the plugin directory defined by `SELLERS_PATH`. It
+ * extracts both the changelog and the description sections.
  *
- * @return string The changelog content extracted from the appropriate file.
+ * @return array An associative array containing 'changelog' and 'description' content.
  */
-function get_plugin_changelog() {
-  
-  // Prioritize `README.md`, fallback to `readme.txt`
+function get_plugin_details() {
   $readme_md_path  = SELLERS_PATH . 'README.md';
-  $readme_txt_path = SELLERS_PATH . 'readme.txt';
-  $changelog_content = '';
+  $details = [
+    'changelog' => '',
+    'description' => ''
+  ];
 
   if ( file_exists( $readme_md_path ) ) {
-    $changelog_content = parse_readme_md_changelog( $readme_md_path );
-  } elseif ( file_exists( $readme_txt_path  )) {
-    $changelog_content = parse_readme_txt_changelog( $readme_txt_path );
-  } 
+    $details['changelog'] = parse_readme_md_section( $readme_md_path, 'changelog' );
+    $details['description'] = parse_readme_md_section( $readme_md_path, 'description' );
+  }
 
-  return $changelog_content;
+  return $details;
 }
 
 /**
- * Parses the changelog section from a `readme.txt` file.
+ * Parses a specific section from the `README.md` file.
  *
- * This function reads the contents of the specified `readme.txt` file
- * and extracts the changelog section, if present. The changelog content
- * is formatted with HTML line breaks and wrapped in a `<pre>` tag for
- * display purposes.
+ * This function extracts a section such as `Changelog` or `Description` 
+ * by identifying headers and processing content accordingly.
  *
- * @param string $file_path The file path to the `readme.txt` file.
- * @return string The formatted changelog content or a message indicating
- *                that no changelog section was found.
+ * @param string $file_path The file path to the `README.md` file.
+ * @param string $section The section to extract (e.g., 'Changelog', 'Description').
+ * @return string The formatted content in HTML or a message indicating
+ *                that no section was found.
  */
-function parse_readme_txt_changelog( $file_path ) {
+function parse_readme_md_section( $file_path, $section ) {
   $content = file_get_contents( $file_path );
   $matches = [];
-  
-  if ( preg_match( '/==\s*Changelog\s*==\n(.*?)(==|$)/s', $content, $matches ) ) {
-    $changelog = trim( $matches[1] );
 
-    // Convert newlines to HTML list
-    $changelog = nl2br( esc_html( $changelog ) );
-    return '<pre>' . $changelog . '</pre>';
+  $section_regex = [
+    'changelog'   => '##\s{1}Changelog\s{1}##\s*\R([\s\S]*?)(?=\n##\s{1}|\z)',
+    'description' => '##\s{1}Description\s{1}##\s*\R([\s\S]*?)(?=\n##\s{1}|\z)',
+  ];
+
+  if ( preg_match( '/' . $section_regex[$section] . '/m', $content, $matches ) ) {
+    $section_content = trim( $matches[1] );
+
+    if( 'changelog' == $section ){
+      $formatted_content = parse_readme_md_changelog( $section_content );
+    } else {
+      $lines = explode( "\n", $section_content );
+      $formatted_content = '';
+
+      foreach ( $lines as $line ) {
+        $line = trim( $line );
+        if ( empty( $line ) ) {
+          continue;
+        }
+        $formatted_content .= '<p>' . esc_html( $line ) . '</p>';
+      }    
+      $formatted_content = convert_markdown_links_to_html( $formatted_content );  
+    }
+
+    return $formatted_content;
   }
 
-  return 'No changelog section found in readme.txt.';
+  return 'No ' . esc_html( $section ) . ' section found in README.md.';
 }
 
 /**
@@ -210,52 +222,57 @@ function parse_readme_txt_changelog( $file_path ) {
  * @return string The formatted changelog content in HTML or a message indicating
  *                that no changelog section was found.
  */
-function parse_readme_md_changelog( $file_path ) {
-  $content = file_get_contents( $file_path );
-  $matches = [];
+function parse_readme_md_changelog( $content ) {
+  
+  $lines = explode( "\n", $content );
+  $formatted_content = '';
+  $in_list = false;
 
-  if ( preg_match( '/##\s{1}Changelog\s{1}##\s*\R([\s\S]*?)(?=\n##\s{1}|\z)/m', $content, $matches ) ) {
-    $changelog_content = trim( $matches[1] );
-    $lines = explode( "\n", $changelog_content );
-    $formatted_content = '';
-    $in_list = false;
+  foreach ( $lines as $line ) {
+    $line = trim( $line );
 
-    foreach ( $lines as $line ) {
-      $line = trim( $line );
-
-      // Skip empty lines
-      if ( empty( $line ) ) {
-        continue;
-      }
-
-      // If line starts with ###, treat it as a version header
-      if ( preg_match( '/^###\s*(.*?)\s*###$/', $line, $version_match ) ) {
-        // Close previous list if open
-        if ( $in_list ) {
-          $formatted_content .= '</ul>';
-          $in_list = false;
-        }
-
-        $formatted_content .= '<h4>' . esc_html( $version_match[1] ) . '</h4>';
-      }
-      // If line starts with *, treat it as a list item
-      elseif ( strpos( $line, '* ' ) === 0 ) {
-        if ( ! $in_list ) {
-          $formatted_content .= '<ul>';
-          $in_list = true;
-        }
-
-        $formatted_content .= '<li>' . esc_html( substr( $line, 2 ) ) . '</li>';
-      }
+    // Skip empty lines
+    if ( empty( $line ) ) {
+      continue;
     }
 
-    // Close any remaining open <ul>
-    if ( $in_list ) {
-      $formatted_content .= '</ul>';
-    }
+    // If line starts with ###, treat it as a version header
+    if ( preg_match( '/^###\s*(.*?)\s*###$/', $line, $version_match ) ) {
+      // Close previous list if open
+      if ( $in_list ) {
+        $formatted_content .= '</ul>';
+        $in_list = false;
+      }
 
-    return $formatted_content;
+      $formatted_content .= '<h4>' . esc_html( $version_match[1] ) . '</h4>';
+    }
+    // If line starts with *, treat it as a list item
+    elseif ( strpos( $line, '* ' ) === 0 ) {
+      if ( ! $in_list ) {
+        $formatted_content .= '<ul>';
+        $in_list = true;
+      }
+
+      $formatted_content .= '<li>' . esc_html( substr( $line, 2 ) ) . '</li>';
+    }
   }
 
-  return 'No changelog section found in README.md.';
+  // Close any remaining open <ul>
+  if ( $in_list ) {
+    $formatted_content .= '</ul>';
+  }
+
+  return $formatted_content;
+}
+
+/**
+ * Converts markdown-style links to HTML anchor tags.
+ *
+ * @param string $text The input text containing markdown links.
+ * @return string The text with markdown links converted to HTML.
+ */
+function convert_markdown_links_to_html( $text ) {
+    $pattern = '/\[(.*?)\]\((.*?)\)/';
+    $replacement = '<a href="$2">$1</a>';
+    return preg_replace( $pattern, $replacement, $text );
 }
